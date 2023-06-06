@@ -31,12 +31,12 @@ class WelcomeScreen extends StatelessWidget {
               const Spacer(),
               const Text(
                 'Welcome!',
-                style: titleTextStyle,
+                style: titleLightTextStyle,
               ),
               const SizedBox(height: 5),
               const Text(
                 'Driving pleasure is yours, taking care is ours.',
-                style: subtitleTextStyle,
+                style: subtitleLightTextStyle,
               ),
               const SizedBox(height: 25),
               PrimaryButton.dark(

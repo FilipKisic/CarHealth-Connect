@@ -30,6 +30,7 @@ flutter:
   assets:
     - assets/images/
     - assets/fonts/
+    - assets/icons/
 
   fonts:
     - family: Helvetica
@@ -39,3 +40,6 @@ flutter:
         - asset: assets/fonts/Helvetica.ttf
         - asset: assets/fonts/Helvetica-Light.ttf
           weight: 300
+    - family:  CustomIcons
+      fonts:
+        - asset: assets/icons/CustomIcons.ttf

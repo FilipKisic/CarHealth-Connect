@@ -47,7 +47,7 @@ class LoginScreen extends HookConsumerWidget {
                   height: 150,
                 ),
                 const SizedBox(height: 30),
-                const Text('Welcome back!', style: titleTextStyle),
+                const Text('Welcome back!', style: titleLightTextStyle),
                 const SizedBox(height: 40),
                 CustomTextField(
                   controller: emailController,

@@ -1,13 +1,23 @@
 import 'package:car_health_connect/core/style/colors.dart';
 import 'package:flutter/material.dart';
 
-const titleTextStyle = TextStyle(
+const titleLightTextStyle = TextStyle(
   color: textLightColor,
   fontSize: 32,
   fontWeight: FontWeight.bold,
 );
-const subtitleTextStyle = TextStyle(
+const titleDarkTextStyle = TextStyle(
+  color: textDarkColor,
+  fontSize: 32,
+  fontWeight: FontWeight.bold,
+);
+const subtitleLightTextStyle = TextStyle(
   color: textLightColor,
+  fontSize: 24,
+  fontWeight: FontWeight.bold,
+);
+const subtitleDarkTextStyle = TextStyle(
+  color: textDarkColor,
   fontSize: 24,
   fontWeight: FontWeight.bold,
 );
@@ -28,4 +38,8 @@ const formTextStyle = TextStyle(
 const errorTextStyle = TextStyle(
   color: errorColor,
   fontSize: 14,
+);
+const cardDetailsTextStyle = TextStyle(
+  color: grayColor,
+  fontSize: 18,
 );

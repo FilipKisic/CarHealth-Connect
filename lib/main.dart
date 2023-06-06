@@ -15,6 +15,7 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         brightness: Brightness.light,
+        useMaterial3: true,
         fontFamily: 'Helvetica',
         scaffoldBackgroundColor: backgroundColor,
         primaryColor: primaryColor,

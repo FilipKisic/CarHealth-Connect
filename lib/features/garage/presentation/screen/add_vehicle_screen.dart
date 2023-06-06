@@ -1,3 +1,4 @@
+import 'package:car_health_connect/core/routes.dart';
 import 'package:car_health_connect/core/style/text_styles.dart';
 import 'package:car_health_connect/core/widget/custom_text_field.dart';
 import 'package:car_health_connect/core/widget/primary_button.dart';
@@ -24,6 +25,7 @@ class AddVehicleScreen extends HookConsumerWidget {
     final vinController = useTextEditingController();
 
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: SafeArea(
         child: Container(
           decoration: const BoxDecoration(
@@ -44,7 +46,7 @@ class AddVehicleScreen extends HookConsumerWidget {
                     width: 50,
                   ),
                   const SizedBox(height: 20),
-                  const Text('Add vehicle', style: titleTextStyle),
+                  const Text('Add vehicle', style: titleLightTextStyle),
                   const SizedBox(height: 20),
                   CustomTextField(
                     controller: vinController,
@@ -58,8 +60,8 @@ class AddVehicleScreen extends HookConsumerWidget {
                   ),
                   const SizedBox(height: 30),
                   PrimaryButton.dark(
-                    child: Text('ADD VEHICLE'),
-                    onPressed: () {},
+                    child: const Text('ADD VEHICLE'),
+                    onPressed: () => _redirectToGarageScreen(context),
                   ),
                 ],
               ),
@@ -69,4 +71,7 @@ class AddVehicleScreen extends HookConsumerWidget {
       ),
     );
   }
+
+  void _redirectToGarageScreen(final BuildContext context) =>
+      Navigator.of(context).pushReplacementNamed(RouteGenerator.garageScreen);
 }

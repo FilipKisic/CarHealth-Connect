@@ -61,7 +61,7 @@ class RegisterScreen extends HookConsumerWidget {
                     height: 150,
                   ),
                   const SizedBox(height: 30),
-                  const Text('Introduce yourself', style: titleTextStyle),
+                  const Text('Introduce yourself', style: titleLightTextStyle),
                   const SizedBox(height: 40),
                   CustomTextField(
                     controller: emailController,
