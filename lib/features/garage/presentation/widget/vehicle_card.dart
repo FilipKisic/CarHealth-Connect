@@ -1,7 +1,7 @@
 import 'package:car_health_connect/core/style/colors.dart';
-import 'package:car_health_connect/core/style/text_styles.dart';
+import 'package:car_health_connect/core/style/custom_icons.dart';
 import 'package:car_health_connect/core/utils/number_extensions.dart';
-import 'package:car_health_connect/features/garage/presentation/utils/custom_icons.dart';
+import 'package:car_health_connect/features/garage/presentation/style/text_styles.dart';
 import 'package:car_health_connect/features/garage/presentation/widget/icon_text.dart';
 import 'package:flutter/material.dart';
 
@@ -43,7 +43,7 @@ class VehicleCard extends StatelessWidget {
           children: [
             Text(
               model,
-              style: subtitleDarkTextStyle,
+              style: modelTextStyle,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),

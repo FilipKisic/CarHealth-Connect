@@ -1,4 +1,9 @@
 import 'package:car_health_connect/core/style/colors.dart';
+import 'package:car_health_connect/core/style/constants.dart';
+import 'package:car_health_connect/core/style/text_styles.dart';
+import 'package:car_health_connect/core/style/custom_icons.dart';
+import 'package:car_health_connect/features/home/presentation/widget/details_full_card.dart';
+import 'package:car_health_connect/features/home/presentation/widget/details_item_card.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -6,54 +11,59 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        padding: const EdgeInsets.all(16),
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [primaryColor, whiteColor],
-          ),
+    return Container(
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [primaryColor, whiteColor],
         ),
-        child: SafeArea(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const Text('ALL GOOD'),
-              const Spacer(),
-              SizedBox(
-                height: 150,
-                child: ListView.separated(
-                  scrollDirection: Axis.horizontal,
-                  physics: const BouncingScrollPhysics(),
-                  itemCount: 4,
-                  separatorBuilder: (context, _) => const SizedBox(width: 20),
-                  itemBuilder: (context, _) => Container(
-                    color: whiteColor,
-                    width: 150,
-                    height: 150,
+      ),
+      child: SafeArea(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Padding(
+              padding: appPadding,
+              child: Image(
+                image: AssetImage('assets/images/bmw_logo.png'),
+                width: 50,
+              ),
+            ),
+            const Expanded(
+              child: Stack(
+                fit: StackFit.expand,
+                children: [
+                  Padding(
+                    padding: appHorizontalPadding,
+                    child: Text('ALL\nGOOD', style: homeTitleTextStyle),
                   ),
-                ),
-              ),
-              const SizedBox(height: 20),
-              Container(
-                decoration: BoxDecoration(
-                  color: whiteColor,
-                  boxShadow: [
-                    BoxShadow(
-                      offset: const Offset(0, 5),
-                      color: primaryColor.withOpacity(0.4),
-                      blurRadius: 10,
+                  Positioned(
+                    bottom: 5,
+                    left: 120,
+                    child: Image(
+                      image: AssetImage('assets/images/bmw_5.png'),
+                      width: 350,
                     ),
-                  ],
-                ),
-                width: double.infinity,
-                height: 200,
-                child: const Text('Hello'),
+                  ),
+                ],
               ),
-            ],
-          ),
+            ),
+            SizedBox(
+              height: 150,
+              child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                physics: const BouncingScrollPhysics(),
+                itemCount: 4,
+                itemBuilder: (context, _) => const DetailsItemCard(
+                  title: 'Total\nmileage',
+                  icon: CustomIcons.road,
+                  subtitle: '35 758 km',
+                ),
+              ),
+            ),
+            const DetailsFullCard(),
+          ],
         ),
       ),
     );

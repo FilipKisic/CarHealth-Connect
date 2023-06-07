@@ -43,14 +43,14 @@ class GarageScreen extends StatelessWidget {
                         ? VehicleCard(
                             model: '540d',
                             mileage: 35758,
-                            imagePath: 'assets/images/bmw_5.png',
+                            imagePath: 'assets/images/bmw_5_profile.png',
                             power: 250,
                             onPressed: () => _redirectToHomeScreen(context),
                           )
                         : VehicleCard(
                             model: 'X3 30d',
                             mileage: 12905,
-                            imagePath: 'assets/images/bmw_x3.png',
+                            imagePath: 'assets/images/bmw_x3_profile.png',
                             power: 195,
                             onPressed: () => _redirectToHomeScreen(context),
                           ),
@@ -65,5 +65,5 @@ class GarageScreen extends StatelessWidget {
   }
 
   void _redirectToHomeScreen(final BuildContext context) =>
-      Navigator.of(context).pushReplacementNamed(RouteGenerator.homeScreen);
+      Navigator.of(context).pushReplacementNamed(RouteGenerator.mainScreen);
 }

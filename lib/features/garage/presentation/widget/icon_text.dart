@@ -1,5 +1,5 @@
 import 'package:car_health_connect/core/style/colors.dart';
-import 'package:car_health_connect/core/style/text_styles.dart';
+import 'package:car_health_connect/features/garage/presentation/style/text_styles.dart';
 import 'package:flutter/material.dart';
 
 class IconText extends StatelessWidget {
@@ -20,7 +20,7 @@ class IconText extends StatelessWidget {
       children: [
         Icon(icon, color: grayColor),
         const SizedBox(width: 7),
-        Text(text, style: cardDetailsTextStyle),
+        Text(text, style: specsTextStyle),
       ],
     );
   }

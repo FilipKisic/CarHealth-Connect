@@ -26,14 +26,14 @@ class AddVehicleScreen extends HookConsumerWidget {
 
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      body: SafeArea(
-        child: Container(
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage('assets/images/add_vehicle_background.jpg'),
-              fit: BoxFit.cover,
-            ),
+      body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/images/add_vehicle_background.jpg'),
+            fit: BoxFit.cover,
           ),
+        ),
+        child: SafeArea(
           child: Padding(
             padding: const EdgeInsets.all(16.0),
             child: ReactiveForm(
